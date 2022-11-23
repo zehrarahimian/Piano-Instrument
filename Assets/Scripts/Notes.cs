@@ -5,5 +5,6 @@ using System;
 
 public class Notes : MonoBehaviour
 {
+    public static event Action<string> toneMane = delegate{};
     
 }
