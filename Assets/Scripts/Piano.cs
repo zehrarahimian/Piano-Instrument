@@ -19,7 +19,10 @@ public class Piano : MonoBehaviour
     private void Update(){
         if(Input.GetMouseButtonUp(0)) {
             for(int i=0; i < notesT.Length; i++) {
-            notesT[i].localScale = new Vector3 (1,1,1);
+                if(i<=13)    
+                notesT[i].localScale = new Vector3 (1.21f,1.09f,1);
+                else if(i>=14)    
+                notesT[i].localScale = new Vector3 (0.940f,0.883f,1);
         }
         }
         
@@ -58,52 +61,52 @@ public class Piano : MonoBehaviour
             break;
             case "D#":
             audioSource.PlayOneShot (audioClip[5]);
-            notesT[7].localScale = pos();
+            notesT[14].localScale = pos();
             break;
             case "C#":
             audioSource.PlayOneShot (audioClip[3]);
-            notesT[8].localScale = pos();
+            notesT[15].localScale = pos();
             break;
             case "A#":
             audioSource.PlayOneShot (audioClip[0]);
-            notesT[9].localScale = pos();
+            notesT[16].localScale = pos();
             break;
             case "G#":
             audioSource.PlayOneShot (audioClip[10]);
-            notesT[10].localScale = pos();
+            notesT[17].localScale = pos();
             break;
             case "F#":
             audioSource.PlayOneShot (audioClip[8]);
-            notesT[11].localScale = pos();
+            notesT[18].localScale = pos();
             break;
 
             case "E2":
             audioSource.PlayOneShot (audioClip[7]);
-            notesT[12].localScale = pos();
+            notesT[7].localScale = pos();
             break;
             case "D2":
             audioSource.PlayOneShot (audioClip[6]);
-            notesT[13].localScale = pos();
+            notesT[8].localScale = pos();
             break;
             case "C2":
             audioSource.PlayOneShot (audioClip[4]);
-            notesT[14].localScale = pos();
+            notesT[9].localScale = pos();
             break;
             case "B2":
             audioSource.PlayOneShot (audioClip[2]);
-            notesT[15].localScale = pos();
+            notesT[10].localScale = pos();
             break;
             case "A2":
             audioSource.PlayOneShot (audioClip[1]);
-            notesT[16].localScale = pos();
+            notesT[11].localScale = pos();
             break;
             case "G2":
             audioSource.PlayOneShot (audioClip[11]);
-            notesT[17].localScale = pos();
+            notesT[12].localScale = pos();
             break;
             case "F2":
             audioSource.PlayOneShot (audioClip[9]);
-            notesT[18].localScale = pos();
+            notesT[13].localScale = pos();
             break;
             case "D#2":
             audioSource.PlayOneShot (audioClip[5]);
