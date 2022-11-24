@@ -4,15 +4,53 @@ using UnityEngine;
 
 public class Piano : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public AudioClip[] audioClip;
+    private AudioSource audioSource;
+
+    private void Start(){
+        audioSource = GetComponent<AudioSource> ();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void PlaySound(string name) {
+        switch(name)
+        {
+            case "E":
+            audioSource.PlayOneShot (audioClip[0]);
+            break;
+            case "D":
+            audioSource.PlayOneShot (audioClip[1]);
+            break;
+            case "C":
+            audioSource.PlayOneShot (audioClip[2]);
+            break;
+            case "B":
+            audioSource.PlayOneShot (audioClip[3]);
+            break;
+            case "A":
+            audioSource.PlayOneShot (audioClip[4]);
+            break;
+            case "G":
+            audioSource.PlayOneShot (audioClip[5]);
+            break;
+            case "F":
+            audioSource.PlayOneShot (audioClip[6]);
+            break;
+            case "D#":
+            audioSource.PlayOneShot (audioClip[7]);
+            break;
+            case "C#":
+            audioSource.PlayOneShot (audioClip[8]);
+            break;
+            case "A#":
+            audioSource.PlayOneShot (audioClip[9]);
+            break;
+            case "G#":
+            audioSource.PlayOneShot (audioClip[10]);
+            break;
+            case "F#":
+            audioSource.PlayOneShot (audioClip[11]);
+            break;
+            
+        }
     }
 }
